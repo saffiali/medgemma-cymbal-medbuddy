@@ -129,7 +129,7 @@ To run the application on your local machine for testing:
 1.  **Clone the repository:**
     ```bash
     git clone <your-repository-url>
-    cd cymbal-med-buddy
+    cd medgemma-cymbal-medbuddy
     ```
 
 2.  **Create a virtual environment:**
@@ -173,7 +173,7 @@ To run the application on Google Cloud Shell:
 2.  **Clone the repository:**
     ```bash
     git clone <your-repository-url>
-    cd cymbal-med-buddy
+    cd medgemma-cymbal-medbuddy
     ```
 
     Make sure to change the `.env` file with required parameters.

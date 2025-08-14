@@ -220,3 +220,4 @@ The application's logic is contained within `app.py`. Here are some key componen
 - https://cloud.google.com/vertex-ai/docs/general/deployment
 
 ---
+

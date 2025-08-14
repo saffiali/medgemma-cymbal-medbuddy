@@ -180,7 +180,7 @@ To run the application on Google Cloud Shell:
 
 3.  **Run the application:**
    
-    - Use [uv](https://docs.astral.sh/uv/) (Python's extremely fast package and project manager) to run the application. It comes pre-installed in Cloud Shell.
+    - Use [uv](https://docs.astral.sh/uv/) (Python's extremely fast package and project manager) to run the application. It comes pre-installed in Cloud Shell. Create a virtual environment using `uv venv`
     - Run `uv pip install -r requirements.txt` to install the dependencies.
     - Start the application using `uv run streamlit run app.py --server.port=8080 --server.enableCORS=false` (disabling `--server.enableCORS` for testing as it interferes with Cloud Shell).
     - Click `Web Preview` to access the application.
@@ -220,4 +220,5 @@ The application's logic is contained within `app.py`. Here are some key componen
 - https://cloud.google.com/vertex-ai/docs/general/deployment
 
 ---
+
 

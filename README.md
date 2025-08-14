@@ -209,6 +209,14 @@ The application's logic is contained within `app.py`. Here are some key componen
 
 ---
 
+## ⚙️ Sample Outputs
+
+![Screenshot#1](images/docs/test-1.gif)
+
+![Screenshot#2](images/docs/test-2.gif)
+
+![Screenshot#3](images/docs/test-3.gif)
+
 ## 🔗 References
 
 - https://deepmind.google/models/gemma/medgemma/
@@ -220,5 +228,6 @@ The application's logic is contained within `app.py`. Here are some key componen
 - https://cloud.google.com/vertex-ai/docs/general/deployment
 
 ---
+
 
 

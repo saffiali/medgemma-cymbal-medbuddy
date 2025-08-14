@@ -1,0 +1,8 @@
+google
+google-cloud-core
+google-cloud-aiplatform
+streamlit
+gunicorn
+python-dotenv
+logging
+Pillow

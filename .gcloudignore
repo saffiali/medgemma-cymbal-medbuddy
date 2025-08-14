@@ -1,0 +1,55 @@
+# -----------------------------------------------------------------------------
+# Google Cloud SDK Ignore File (.gcloudignore)
+#
+# https://cloud.google.com/sdk/gcloud/reference/topic/gcloudignore
+#
+# This file specifies files and directories that should NOT be uploaded to
+# Google Cloud when deploying your application (e.g., via `gcloud app deploy`
+# or `gcloud run deploy --source .`). A comprehensive ignore file is crucial for:
+#
+#   1. Faster Deployments: Prevents uploading unnecessary files.
+#   2. Security: Prevents uploading sensitive data like local secrets or credentials.
+#   3. Smaller Container Images: Results in a leaner, more efficient application image.
+#   4. Avoiding Build Conflicts: Excludes local artifacts that might interfere with
+#      the cloud build process.
+#
+# -----------------------------------------------------------------------------
+
+# Git directory and related files
+# The .git directory is ignored by default, but it's good practice to be explicit.
+.git/
+.gitignore
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local secrets and environment variables
+# These should be managed via Secret Manager or Cloud Run environment variables, not uploaded.
+.env
+
+# IDE / Editor configuration
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build and distribution artifacts
+build/
+dist/
+
+# Backup files and documentation drafts
+*.bkp

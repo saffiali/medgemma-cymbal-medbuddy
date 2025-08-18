@@ -12,6 +12,8 @@ Cymbal MedBuddy is a multi-modal AI assistant designed to aid radiologists, medi
 
 The backend is powered by **MedGemma**, a state-of-the-art vision-language model from Google, deployed on a dedicated **Vertex AI Endpoint**. The frontend is a user-friendly and responsive interface built with **Streamlit**.
 
+Details of this application is published in Google Cloud Community under: https://medium.com/google-cloud/analyze-medical-images-with-medgemma-a-technical-deep-dive-fee0be18e7e0
+
 ### Project Structure
 
 Below is the directory structure of the project:
@@ -228,6 +230,7 @@ The application's logic is contained within `app.py`. Here are some key componen
 - https://cloud.google.com/vertex-ai/docs/general/deployment
 
 ---
+
 
 
 

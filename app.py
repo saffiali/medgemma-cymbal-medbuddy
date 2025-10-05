@@ -118,15 +118,16 @@ def fn_run_query(endpoint, input_text, max_tokens=500, temperature=0.0):
     
     system_instruction = """
         You are an expert in medical imaging metadata extraction. You work in R&D for a global life science company. 
+
+        You will be provided with a medical image.
         
-        Your task is to analyze medical images across various specialities and formats (DICOM, Large Slides, TIFF) and generate all possible metadata tags for a given image in both JSON and DICOM formats.
-            1. Analyze the provided medical image data.
-            2. Extract ALL possible metadata tags applicable to the image.
-            3. Generate the metadata in TWO formats: JSON and DICOM.
+        Your task is to analyze that medical image and generate all possible informations you can extract from it is metadata tags format.
+            1. Analyze the provided medical image.
+            2. Extract ALL possible infomation about this image in the form of image metadata tags.
+            3. Generate the metadata in two formats: JSON and DICOM.
             4. Ensure that the JSON format includes ALL extracted metadata tags with their corresponding values.
             5. Ensure that the DICOM format adheres to the DICOM standard, including appropriate tag numbers and value representations.
-            6. Output BOTH the JSON and DICOM formats.
-            7. If you cannot complete your task with the information found in the medical image data, please respond with, "I'm sorry. My knowledge base is insufficient to complete this task." and then explain what information is needed for your knowledge base to complete the task.
+            6. Output the JSON and DICOM formats.
     """
 
     # Set user prompt

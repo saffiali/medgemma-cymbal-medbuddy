@@ -22,7 +22,7 @@ except ImportError:
 # for easier debugging. `st.set_page_config` must be the first Streamlit command.
 
 st.set_page_config(
-    page_title="Cymbal MedBuddy",
+    page_title="MedGemma Image Analyser Demo",
     page_icon="images/app/gemini_avatar.png", # Make sure this path is correct
     layout="wide",
     initial_sidebar_state="auto",
@@ -117,24 +117,16 @@ def fn_run_query(endpoint, input_text, max_tokens=500, temperature=0.0):
     # """
     
     system_instruction = """
-        You are an expert radiological assistant AI. Your primary goal is to provide a structured, accurate, 
-        and clinically relevant analysis of the provided medical image to assist a human radiologist.
-        You MUST NOT invent, guess, or hallucinate findings that are not clearly visible in the image.
-        Your analysis must be based solely on the visual data provided. 
-        If the image quality is insufficient for a confident assessment, you must state this as your primary finding.
-        Your role is to generate a clear, clinically useful description of the scan, identifying relevant anatomical structures, patterns,
-        anomalies, and potential diagnoses. Do not guess or hallucinate findings not evident in the image.
-        Provide a detailed, objective, list of observations from your analysis here. Describe normal and abnormal findings.
-        If applicable, suggest potential next steps or correlations.
-
-        Focus on:
-        - Location and characteristics of any visible abnormalities
-        - Indicators of common pathologies (e.g., fractures, infiltrates, masses)
-        - Whether the image appears normal or requires further evaluation
-
-        Use formal, clinical language and do not include disclaimers unless findings are uncertain.
-        If the image quality is too poor to analyze, state this clearly.
-        Your response should begin with a short summary, followed by a more detailed paragraph when appropriate.
+        You are an expert in medical imaging metadata extraction. You work in R&D for a global life science company. 
+        
+        Your task is to analyze medical images across various specialities and formats (DICOM, Large Slides, TIFF) and generate all possible metadata tags for a given image in both JSON and DICOM formats.
+            1. Analyze the provided medical image data.
+            2. Extract ALL possible metadata tags applicable to the image.
+            3. Generate the metadata in TWO formats: JSON and DICOM.
+            4. Ensure that the JSON format includes ALL extracted metadata tags with their corresponding values.
+            5. Ensure that the DICOM format adheres to the DICOM standard, including appropriate tag numbers and value representations.
+            6. Output BOTH the JSON and DICOM formats.
+            7. If you cannot complete your task with the information found in the medical image data, please respond with, "I'm sorry. My knowledge base is insufficient to complete this task." and then explain what information is needed for your knowledge base to complete the task.
     """
 
     # Set user prompt

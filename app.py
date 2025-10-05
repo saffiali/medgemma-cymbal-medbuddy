@@ -205,7 +205,7 @@ def fn_format_chat_history():
     Returns:
         str: A formatted string containing the chat history.
     """
-    history_str = "Cymbal MedBuddy Chat History\n"
+    history_str = "MedGemma Image Analyser Chat History\n"
     history_str += f"Exported on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
     history_str += "="*40 + "\n\n"
 
@@ -225,7 +225,7 @@ def fn_render_sidebar():
     with st.sidebar:
         # Make sure the image path is correct or comment out if not needed
         st.image("images/app/gemini_avatar.png", width=100)
-        st.markdown("<h1 style='text-align: center;'>Cymbal MedBuddy</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>MedGemma Image Analyser Demo</h1>", unsafe_allow_html=True)
         st.markdown("---")
 
         uploaded_file = st.file_uploader(
@@ -338,7 +338,7 @@ def main():
     """
     Main function to orchestrate the Streamlit app.
     """
-    logger.info("Starting Cymbal MedBuddy application...")
+    logger.info("Starting MedGemma Image Analyser application...")
     
     # Define avatar paths. Ensure these files exist in the specified locations.
     avatars = {"assistant": "images/app/gemini_avatar.png", "user": "images/app/user_avatar.png"}
@@ -350,7 +350,7 @@ def main():
     # chat history persists across reruns (e.g., when a user uploads a new image).
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            {"role": "assistant", "content": "Hello! Please upload a medical scan to get started."}
+            {"role": "assistant", "content": "Hello! Please upload a medical image to get started."}
         ]
 
     # Initialize model parameters in session state if they don't exist.
@@ -362,7 +362,7 @@ def main():
     # Render UI components in order
     fn_render_sidebar()
     st.title("AI-Powered Medical Image Analysis")
-    st.markdown("Your assistant for interpreting medical scans. Upload a scan via the sidebar and ask a question to begin.")
+    st.markdown("Your assistant for interpreting medical scans. Upload a medical Image via the sidebar and ask a question to begin.")
     st.markdown("---")
     
     fn_render_chat_interface(avatars)
